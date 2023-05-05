@@ -1,4 +1,5 @@
 #Как использовать image_parser.py
+
 `python image_parser.py -u http://example.com/page/{} -s 1 -e 10 -o broken_images.txt`
 
 `image_parser.py` - Имя Python-файла 
