@@ -19,7 +19,10 @@ for i in range(args.start_page, args.end_page + 1):
     url = args.base_url.format(i)
 
     # Send a GET request to the page and get the HTML content
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+    except requests.exceptions.RequestException:
+        continue
     html_content = response.text
 
     # Parse the HTML using BeautifulSoup
